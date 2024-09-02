@@ -10,7 +10,7 @@ Before you start, make sure you have the following installed:
 - [Node.js](https://nodejs.org/) (includes npm)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Git](https://git-scm.com/) (optional, but useful for version control)
-- [Images]([https://git-scm.com/](https://drive.google.com/drive/folders/1eCqA_v5ACpylHsGKhYGwUVgRuTnUY8yq?usp=sharing))
+- [Images](https://drive.google.com/drive/folders/1eCqA_v5ACpylHsGKhYGwUVgRuTnUY8yq?usp=sharing) (Drive Link)
 
 ## Getting Started
 
