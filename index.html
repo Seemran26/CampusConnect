@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script src="https://kit.fontawesome.com/8d189ebb22.js" crossorigin="anonymous"></script>
+
+  <!-- Tailwind css-->
+  <script type="text/javascript">
+    window.tailwind.config = {
+      darkMode: ['class'],
+      theme: {
+        extend: {
+          colors: {
+            border: 'hsl(var(--border))',
+            input: 'hsl(var(--input))',
+            ring: 'hsl(var(--ring))',
+            background: 'hsl(var(--background))',
+            foreground: 'hsl(var(--foreground))',
+            primary: {
+              DEFAULT: 'hsl(var(--primary))',
+              foreground: 'hsl(var(--primary-foreground))'
+            },
+            secondary: {
+              DEFAULT: 'hsl(var(--secondary))',
+              foreground: 'hsl(var(--secondary-foreground))'
+            },
+            destructive: {
+              DEFAULT: 'hsl(var(--destructive))',
+              foreground: 'hsl(var(--destructive-foreground))'
+            },
+            muted: {
+              DEFAULT: 'hsl(var(--muted))',
+              foreground: 'hsl(var(--muted-foreground))'
+            },
+            accent: {
+              DEFAULT: 'hsl(var(--accent))',
+              foreground: 'hsl(var(--accent-foreground))'
+            },
+            popover: {
+              DEFAULT: 'hsl(var(--popover))',
+              foreground: 'hsl(var(--popover-foreground))'
+            },
+            card: {
+              DEFAULT: 'hsl(var(--card))',
+              foreground: 'hsl(var(--card-foreground))'
+            },
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Tailwind css-->
+  <style type="text/tailwindcss">
+    @layer base {
+				:root {
+                --background: 0 0% 100%;
+                --foreground: 240 10% 3.9%;
+                --card: 0 0% 100%;
+                --card-foreground: 240 10% 3.9%;
+                --popover: 0 0% 100%;
+                --popover-foreground: 240 10% 3.9%;
+                --primary: 240 5.9% 10%;
+                --primary-foreground: 0 0% 98%;
+                --secondary: 240 4.8% 95.9%;
+                --secondary-foreground: 240 5.9% 10%;
+                --muted: 240 4.8% 95.9%;
+                --muted-foreground: 240 3.8% 46.1%;
+                --accent: 240 4.8% 95.9%;
+                --accent-foreground: 240 5.9% 10%;
+                --destructive: 0 84.2% 60.2%;
+                --destructive-foreground: 0 0% 98%;
+                --border: 240 5.9% 90%;
+                --input: 240 5.9% 90%;
+                --ring: 240 5.9% 10%;
+                --radius: 0.5rem;
+				}
+				.dark {
+            --background: 240 10% 3.9%;
+            --foreground: 0 0% 98%;
+            --card: 240 10% 3.9%;
+            --card-foreground: 0 0% 98%;
+            --popover: 240 10% 3.9%;
+            --popover-foreground: 0 0% 98%;
+            --primary: 0 0% 98%;
+            --primary-foreground: 240 5.9% 10%;
+            --secondary: 240 3.7% 15.9%;
+            --secondary-foreground: 0 0% 98%;
+            --muted: 240 3.7% 15.9%;
+            --muted-foreground: 240 5% 64.9%;
+            --accent: 240 3.7% 15.9%;
+            --accent-foreground: 0 0% 98%;
+            --destructive: 0 62.8% 30.6%;
+            --destructive-foreground: 0 0% 98%;
+            --border: 240 3.7% 15.9%;
+            --input: 240 3.7% 15.9%;
+            --ring: 240 4.9% 83.9%;
+				}
+			}
+		</style>
+
+  <!-- Normal Css -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+
+  <!-- Navbar and Main Image -->
+  <section class="main" id="main">
+    <div class="overlay">
+      <nav class="navbar">
+        <div class="logo">
+          <h2 class="p-3" style="font-size: 26px; font-weight: 600;">CampusConnect</h2>
+        </div>
+        <div style="width: 1000px;">
+          <input type="text" placeholder="Search for colleges, courses, exams..."
+            class="w-full p-3 pl-10 border border-border rounded-lg focus:outline-none focus:ring focus:ring-ring" />
+        </div>
+        <div class="navelements">
+          <div class="nav2 ">
+            <button class="p-3" style="width: 200px; background-color: rgb(207, 207, 207); border-radius: 10px; margin-right: 20px;"> Need Counsiling</button>
+              <button class="p-3" style="width: 150px; background-color: rgb(207, 207, 207); border-radius: 10px; margin-right: 20px;"> Sign Up</button>
+                <button class="p-3" style="width: 150px; background-color: rgb(207, 207, 207); border-radius: 10px; margin-right: 20px;"> Login</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="main-stuff">
+        <div class="main-title">
+          Start your college <br>Discovery...
+        </div>
+        <button style="width: 340px; background-color: rgb(26, 10, 255); padding: 16px; border-radius: 10px;">Explore
+          colleges & universities &nbsp; <i class="fa fa-long-arrow-right fa-sm" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Explore Courses-->
+  <section class="courses">
+    <div id="maindiv">
+      <div class="p-6 bg-background text-foreground">
+        <h1 class="text-2xl font-bold mb-4">Explore your Future</h1>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center">
+            <img aria-hidden="true" src="Images/Future/managemnt.png" />
+            <h2 class="font-semibold mt-2" onclick="navigateToPage('list', 'list-btn1')" style="cursor: pointer;">Management</h2>
+            <p class="text-muted-foreground">6257 Colleges</p>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center">
+            <img aria-hidden="true" src="Images/Future/science.png" />
+            <h2 class="font-semibold mt-2">Science</h2>
+            <p class="text-muted-foreground">5176 Colleges</p>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center">
+            <img aria-hidden="true" src="Images/Future/engineering.png" />
+            <h2 class="font-semibold mt-2" onclick="navigateToPage('list', 'list-btn2')" style="cursor: pointer;">Engineering</h2>
+            <p class="text-muted-foreground">5211 Colleges</p>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center">
+            <img aria-hidden="true" src="Images/Future/law.png" />
+            <h2 class="font-semibold mt-2">Law</h2>
+            <p class="text-muted-foreground">1236 Colleges</p>
+          </div>
+
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center">
+            <img aria-hidden="true" src="Images/Future/medical.png" />
+            <h2 class="font-semibold mt-2">Medical</h2>
+            <p class="text-muted-foreground">1931 Colleges</p>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center">
+            <img aria-hidden="true" src="Images/Future/commerce.png" />
+            <h2 class="font-semibold mt-2">Commerce</h2>
+            <p class="text-muted-foreground">3862 Colleges</p>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center">
+            <img aria-hidden="true" src="Images/Future/pharmacy.png" />
+            <h2 class="font-semibold mt-2">Pharmacy</h2>
+            <p class="text-muted-foreground">1828 Colleges</p>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center">
+            <img aria-hidden="true" src="Images/Future/design.png" />
+            <h2 class="font-semibold mt-2">Design</h2>
+            <p class="text-muted-foreground">1036 Colleges</p>
+          </div>
+
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center">
+            <img aria-hidden="true" src="Images/Future/arts.png" />
+            <h2 class="font-semibold mt-2">Arts</h2>
+            <p class="text-muted-foreground">4289 Colleges</p>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center">
+            <img aria-hidden="true" src="Images/Future/pharmamedical.png" />
+            <h2 class="font-semibold mt-2">Paramedical</h2>
+            <p class="text-muted-foreground">1365 Colleges</p>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center">
+            <img aria-hidden="true" src="Images/Future/agriculture.png" />
+            <h2 class="font-semibold mt-2">Agriculture</h2>
+            <p class="text-muted-foreground">860 Colleges</p>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center">
+            <img aria-hidden="true" src="Images/Future/architecture.png" />
+            <h2 class="font-semibold mt-2">Architecture</h2>
+            <p class="text-muted-foreground">1260 Colleges</p>
+          </div>
+
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center">
+            <img aria-hidden="true" src="Images/Future/dental.png" />
+            <h2 class="font-semibold mt-2">Detnal</h2>
+            <p class="text-muted-foreground">434 Colleges</p>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center">
+            <img aria-hidden="true" src="Images/Future/animation.png" />
+            <h2 class="font-semibold mt-2">Animation</h2>
+            <p class="text-muted-foreground">387 Colleges</p>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center">
+            <img aria-hidden="true" src="Images/Future/aviation.png" />
+            <h2 class="font-semibold mt-2">Aviation</h2>
+            <p class="text-muted-foreground">282 Colleges</p>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center">
+            <img aria-hidden="true" src="Images/Future/computer.png" />
+            <h2 class="font-semibold mt-2">Computer Application</h2>
+            <p class="text-muted-foreground">3904 Colleges</p>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center">
+            <img aria-hidden="true" src="Images/Future/hotel-managemnet.png" />
+            <h2 class="font-semibold mt-2">Hotel Management</h2>
+            <p class="text-muted-foreground">920 Colleges</p>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center">
+            <img aria-hidden="true" src="Images/Future/veterinary-medicine.png" />
+            <h2 class="font-semibold mt-2">Veterinary Science</h2>
+            <p class="text-muted-foreground">101 Colleges</p>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center">
+            <img aria-hidden="true" src="Images/Future/vocational-courses.png" />
+            <h2 class="font-semibold mt-2">Vocational Courses</h2>
+            <p class="text-muted-foreground">860 Colleges</p>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <button id="btn" class="btn">Show More</button>
+
+  </section>
+
+  <!-- Top Universities-->
+  <div class="universities ">
+
+    <h1 class="text-2xl font-bold mb-4 text-dark pt-4 pl-4">Top Universities</h1>
+
+    <div class="tab-titles">
+      <p class="tab-links active-links" onclick="opentab('Management')">Management</p>
+      <p class="tab-links" onclick="opentab('Engineering')">Engineering</p>
+      <p class="tab-links" onclick="opentab('Medical')">Medical</p>
+      <p class="tab-links" onclick="opentab('Law')">Law</p>
+      <p class="tab-links" onclick="opentab('Pharmacy')">Pharmacy</p>
+      <p class="tab-links" onclick="opentab('Computer Application')">Computer Application</p>
+      <p class="tab-links" onclick="opentab('Science')">Science</p>
+      <p class="tab-links" onclick="opentab('Commerce')">Commerce</p>
+      <p class="tab-links" onclick="opentab('Arts')">Arts</p>
+    </div>
+
+
+    <div class="tab-contents active-tab" id="Management">
+      <div class="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2 bg-white"><img
+                src="Images/Universities/Management/IIM Ahmedabad.png" alt=""></div>
+            <h3 class="text-xl font-semibold">IIM Ahmedabad - Indian Institute of Management</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;">
+            <a class="link"> Executive MBA </a>
+            <img src="Images/star.png" style="margin-left: 260px; width: 24px;">
+            <span class="rating"> 4.2/5 </span>
+          </p>
+          <p class="p-2 text">
+            <span class="blue">33Lacs</span> Total Fees <span style="margin-left: 220px;">361 reviews</span>
+          </p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Management/IIM Calcutta.png" alt=""></div>
+            <h3 class="text-xl font-semibold">IIM Calcutta - Indian Institute of Management</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> MBA/PGDM </a> <img src="Images/star.png"
+              class="star-img"> <span class="rating"> 4.3/5 </span> </p>
+          <p class="p-2 text"><span class="blue">27Lacs</span> Total Fees <span class="reviews">662 reviews</span></p>
+          <hr>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Management/IIM Lucknow.png" alt=""></div>
+            <h3 class="text-xl font-semibold">IIM Lucknow- Indian Institute of Management</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> MBA/PGDM </a> <img src="Images/star.png"
+              class="star-img"> <span class="rating"> 4.5/5 </span> </p>
+          <p class="p-2 text"><span class="blue">14.30 Lacs</span> Total Fees <span style="margin-left: 180px;">51
+              reviews</span></p>
+          <hr>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Management/IIM Bangalore.png" alt=""></div>
+            <h3 class="text-xl font-semibold">IIM Bangalore - Indian Institute of Management</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> BBA/BBM </a> <img src="Images/star.png"
+              style="margin-left: 300px; width: 22px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">1.25Lacs</span> First Year Fees <span style="margin-left: 180px;">361
+              reviews</span></p>
+          <hr>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Management/IIM Kozhikode.png" alt=""></div>
+            <h3 class="text-xl font-semibold">IIM Kozhikode - Indian Institute of Management</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> MBA/PGDM </a> <img src="Images/star.png"
+              class="star-img"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">20.50Lacs</span> Total Fees <span style="margin-left: 180px;">361
+              reviews</span></p>
+          <hr>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Management/SPJIMR Mumbai.png" alt=""></div>
+            <h3 class="text-xl font-semibold mt-2">SPJIMR Mumbai</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> Graduate Certificate in Management </a> <img
+              src="Images/star.png" style="width: 22px; margin-left: 100px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">23.50Lacs</span> Total Fees <span style="margin-left: 200px;">361
+              reviews</span></p>
+          <hr>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="tab-contents" id="Engineering">
+      <div class="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-18 rounded-full mr-2"><img
+                src="Images/Universities/Engineering/IIT Madras.png" alt=""></div>
+            <h3 class="text-xl font-semibold">IIT Madras - Indian Institute of Technology - [IITM]</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.E/B.Tech </a> <img src="Images/star.png"
+              style="margin-left: 300px; width: 22px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">2.5Lacs</span> First Year Fees <span style="margin-left: 200px;">361
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn" onclick="navigateToPage('college', 'college-btn')">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Engineering/IIT Bombay.png" alt=""></div>
+            <h3 class="text-xl font-semibold">IIT Bombay - Indian Institute of Technology</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.E/B.Tech </a> <img src="Images/star.png"
+              style="margin-left: 300px; width: 22px;"> <span class="rating"> 4.3/5 </span> </p>
+          <p class="p-2 text"><span class="blue">2.31Lacs</span> First Year Fees <span style="margin-left: 180px;">662
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Engineering/IIT Roorkee.png" alt=""></div>
+            <h3 class="text-xl font-semibold">IIT Roorkee- Indian Institute of Technology</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> BE/B.Tech</a> <img src="Images/star.png"
+              style="margin-left: 310px; width: 22px;"> <span class="rating"> 4.5/5 </span> </p>
+          <p class="p-2 text"><span class="blue">2.30 Lacs</span> Total Fees <span class="reviews">51 reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-14 rounded-full mr-2 bg-white"><img
+                src="Images/Universities/Engineering/IIT Delhi.png" alt=""></div>
+            <h3 class="text-xl font-semibold">IIT Delhi - Indian Institute of Technology</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.E/B.Tech </a> <img src="Images/star.png"
+              class="star-img" style="margin-left: 300px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">2.29Lacs</span> First Year Fees <span style="margin-left: 180px;">361
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2 bg-white"><img
+                src="Images/Universities/Engineering/IIT Kanpur.png" alt=""></div>
+            <h3 class="text-xl font-semibold">IIT Khanpur - Indian Institute of Technology</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.E/B.Tech </a> <img src="Images/star.png"
+              class="star-img" style="margin-left: 300px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">2.30Lacs</span> First Year Fees <span style="margin-left: 180px;">361
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Engineering/IIT Kharagpur.png" alt=""></div>
+            <h3 class="text-xl font-semibold mt-2">IIT Kharagpur - Indian Institute of Technology</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.E/B.Tech </a> <img src="Images/star.png"
+              class="star-img" style="margin-left: 300px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">2.25Lacs</span> First Year Fees <span style="margin-left: 180px;">361
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="tab-contents" id="Medical">
+      <div class="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-18 rounded-full mr-2"><img src="Images/Universities/Medical/AIIMS Delhi.png"
+                alt=""></div>
+            <h3 class="text-xl font-semibold">All India Institute of Medical Science - AIIMS Delhi</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link">M.Sc </a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 340px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">1.47K</span> First Year Fees <span style="margin-left: 200px;">361
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2 bg-white"><img
+                src="Images/Universities/Medical/CMC Vellore.png" alt=""></div>
+            <h3 class="text-xl font-semibold">Christian Medical College - Vellore</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> M.Sc </a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 340px;"> <span class="rating"> 4.3/5 </span> </p>
+          <p class="p-2 text"><span class="blue">1.97 K</span> First Year Fees <span style="margin-left: 200px;">662
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-12 rounded-full mr-2 bg-white"><img
+                src="Images/Universities/Medical/JIPMER.png" alt=""></div>
+            <h3 class="text-xl font-semibold">Jawaharlal Institute of Graduate Medical Education & Research - JIPMER
+            </h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> M.Sc</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 340px;"> <span class="rating"> 4.5/5 </span> </p>
+          <p class="p-2 text"><span class="blue">14.91K</span> First Year Fees <span style="margin-left: 200px;">51
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-12 rounded-full mr-2"><img
+                src="Images/Universities/Medical/PGIMER Chandigarh.png" alt=""></div>
+            <h3 class="text-xl font-semibold"> Post Graduate Institute Medical Education & Research - PGIMER</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link">M.Sc</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 340px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">6.44 K</span> First Year Fees <span style="margin-left: 200px;">31
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-12 rounded-full mr-2"><img src="Images/Universities/Medical/NIMHANS.png"
+                alt=""></div>
+            <h3 class="text-xl font-semibold">National Institute of Medical Health and Neuro Science - NIMHANS</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.Sc </a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 340px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">30K</span> First Year Fees <span style="margin-left: 200px;">61
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-12 rounded-full mr-2"
+              style="background-image: url('Images/Universities/Medical/SGPGI.png'); background-size: cover;"></div>
+            <h3 class="text-xl font-semibold mt-2">Sanjay Gandhi Postgraduate Institute of Medical Sciences - SGPGI</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link">MD</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 340px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">72.80K</span> First Year Fees <span style="margin-left: 200px;">201
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="tab-contents" id="Law">
+      <div class="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img src="Images/Universities/Law/NLSIU Bangalore.png"
+                alt=""></div>
+            <h3 class="text-xl font-semibold">National Law School of India University - [NLSIU]</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> LLM / Ph.D in Law</a> <img src="Images/star.png"
+              class="star-img" style="margin-left: 240px;"> <span class="rating"> 4.5/5 </span> </p>
+          <p class="p-2 text"><span class="blue">3.01 Lacs / 85K</span> Fees <span style="margin-left: 210px;">51
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img src="Images/Universities/Law/NLU Delhi.png" alt="">
+            </div>
+            <h3 class="text-xl font-semibold mt-2">National Law University - [NLU]</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> PG Diploma in Law / BA LLB</a> <img
+              src="Images/star.png" class="star-img" style="margin-left: 140px;"> <span class="rating"> 4.2/5 </span>
+          </p>
+          <p class="p-2 text"><span class="blue">16K / 2.52 Lacs</span>Fees <span style="margin-left: 190px;">361
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2 bg-white"><img src="Images/Universities/Law/LPU.png"
+                alt=""></div>
+            <h3 class="text-xl font-semibold">Lovely Professional University - [LPU]</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> BA LLB / LLB</a> <img src="Images/star.png"
+              class="star-img" style="margin-left: 285px;"> <span class="rating"> 4.3/5 </span> </p>
+          <p class="p-2 text"><span class="blue">2.4 Lacs / 2.4 Lacs</span>Fees <span style="margin-left: 190px;">162
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img src="Images/Universities/Law/NALSAR.png" alt="">
+            </div>
+            <h3 class="text-xl font-semibold">NALSAR University of Law - [NALSAR]</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> PG Diploma in Law</a> <img src="Images/star.png"
+              class="star-img" style="margin-left: 228px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">20.5K</span> First Year Fees <span style="margin-left: 200px;">361
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2 bg-white"><img
+                src="Images/Universities/Law/UPES Dehradun.png" alt=""></div>
+            <h3 class="text-xl font-semibold">University of Petroleum and Energy Studies - [UPES]</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> BA LLB / Ph.D in Law </a> <img src="Images/star.png"
+              class="star-img" style="margin-left: 228px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">4.05 Lacs / 2.57Lacs</span> Fees <span style="margin-left: 175px;">240
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-18 rounded-full mr-2"><img src="Images/Universities/Law/NLU Kolkata.png"
+                alt=""></div>
+            <h3 class="text-xl font-semibold">The West Bengal National University of Juridical Sciences - [NUJS]</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> BA LLB</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 320px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">2.86Lacs</span> First Year Fees <span style="margin-left: 180px;">201
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="tab-contents" id="Pharmacy">
+      <div class="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Pharmacy/Jamia Hamdard University.png" alt=""></div>
+            <h3 class="text-xl font-semibold">Jamia Hamdard University</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.Pharm</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 320px;"> <span class="rating"> 4.5/5 </span> </p>
+          <p class="p-2 text"><span class="blue">1.74Lacs</span> First Year Fees <span style="margin-left: 190px;">51
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img src="Images/Universities/Pharmacy/BITS Pilani.png"
+                alt=""></div>
+            <h3 class="text-xl font-semibold mt-2">BITS Pilani</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.Pharm</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 320px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">5.72Lacs</span> First Year Fees <span style="margin-left: 190px;">361
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2 bg-white"><img src="Images/Universities/Pharmacy/LPU.png"
+                alt=""></div>
+            <h3 class="text-xl font-semibold">Lovely Professional University - [LPU]</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.Pharm</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 320px;"> <span class="rating"> 4.3/5 </span> </p>
+          <p class="p-2 text"><span class="blue">2.4 Lacs</span> First Year Fees <span style="margin-left: 190px;">162
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img src="Images/Universities/Pharmacy/JSS.png" alt="">
+            </div>
+            <h3 class="text-xl font-semibold">JSS College of Pharmacy - [JSSCOP]</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.Pharm</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 320px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">1.55Lacs</span> First Year Fees <span style="margin-left: 180px;">361
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2 bg-white"><img
+                src="Images/Universities/Pharmacy/UPES.png" alt=""></div>
+            <h3 class="text-xl font-semibold">University of Petroleum and Energy Studies - [UPES]</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.Pharm </a> <img src="Images/star.png"
+              class="star-img" style="margin-left: 320px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">2.57Lacs</span> First Year Fees <span style="margin-left: 180px;">240
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-18 rounded-full mr-2"><img src="Images/Universities/Pharmacy/ICT .png" alt="">
+            </div>
+            <h3 class="text-xl font-semibold">Institute of Chemical Technology - [ICT]</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.Pharm</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 320px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">89.1K</span> First Year Fees <span style="margin-left: 200px;">201
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="tab-contents" id="Computer Application">
+      <div class="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Science/Madras Christian College.png" alt=""></div>
+            <h3 class="text-xl font-semibold">Madras Christian College</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> BCA</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 360px;"> <span class="rating"> 4.5/5 </span> </p>
+          <p class="p-2 text"><span class="blue">25.00 K</span> First Year Fees <span style="margin-left: 205 px;">51
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Science/Hansraj College.png" alt=""></div>
+            <h3 class="text-xl font-semibold">Hansraj College</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> BCA </a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 360px;"> <span class="rating"> 4.3/5 </span> </p>
+          <p class="p-2 text"><span class="blue">29.84 K</span> First Year Fees <span style="margin-left: 190px;">162
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Science/Kirori Mal College.png" alt=""></div>
+            <h3 class="text-xl font-semibold mt-2">Kirori Mal College</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> BCA</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 360px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">13.38K</span> First Year Fees <span style="margin-left: 200px;">361
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img src="Images/Universities/Science/Miranda House.png"
+                alt=""></div>
+            <h3 class="text-xl font-semibold">Miranda House</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> BCA </a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 360px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">14.53K</span> First Year Fees <span style="margin-left: 200px;">240
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Science/St. Stephen’s College.png" alt=""></div>
+            <h3 class="text-xl font-semibold">St Stephen's College</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> BCA</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 360px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">23.47K</span> First Year Fees <span style="margin-left: 200px;">361
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-18 rounded-full mr-2"><img src="Images/Universities/Science/Hindu College.png"
+                alt=""></div>
+            <h3 class="text-xl font-semibold">Hindu College</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> BCA</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 360px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">25.30K</span> First Year Fees <span style="margin-left: 200px;">201
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+
+    <div class="tab-contents" id="Science">
+      <div class="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-18 rounded-full mr-2"><img src="Images/Universities/Science/Hindu College.png"
+                alt=""></div>
+            <h3 class="text-xl font-semibold">Hindu College</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.Sc</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 360px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">25.30K</span> First Year Fees <span style="margin-left: 200px;">201
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Science/Madras Christian College.png" alt=""></div>
+            <h3 class="text-xl font-semibold">Madras Christian College</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.Sc </a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 360px;"> <span class="rating"> 4.5/5 </span> </p>
+          <p class="p-2 text"><span class="blue">25.00 K</span> First Year Fees <span style="margin-left: 180px;">51
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Science/Hansraj College.png" alt=""></div>
+            <h3 class="text-xl font-semibold">Hansraj College</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.Sc </a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 360px;"> <span class="rating"> 4.3/5 </span> </p>
+          <p class="p-2 text"><span class="blue">29.84 K</span> First Year Fees <span style="margin-left: 190px;">162
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img src="Images/Universities/Science/Miranda House.png"
+                alt=""></div>
+            <h3 class="text-xl font-semibold">Miranda House</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.Sc </a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 360px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">14.53K</span> First Year Fees <span style="margin-left: 200px;">240
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Science/St. Stephen’s College.png" alt=""></div>
+            <h3 class="text-xl font-semibold">St Stephen's College</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.Sc</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 360px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">23.47K</span> First Year Fees <span style="margin-left: 200px;">361
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Science/Kirori Mal College.png" alt=""></div>
+            <h3 class="text-xl font-semibold mt-2">Kirori Mal College</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.Sc</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 360px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">13.38K</span> First Year Fees <span style="margin-left: 200px;">361
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="tab-contents" id="Commerce">
+      <div class="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Commerce/Sri Sri University.png" alt=""></div>
+            <h3 class="text-xl font-semibold">Shri Ram College of Commerce</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.Com</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 340px;"> <span class="rating"> 4.5/5 </span> </p>
+          <p class="p-2 text"><span class="blue">25.00 K</span> First Year Fees <span style="margin-left: 205px;">51
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Commerce/Sri Sri University.png" alt=""></div>
+            <h3 class="text-xl font-semibold mt-2">Sri Sri University</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.Com</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 330px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">13.38K</span> First Year Fees <span style="margin-left: 200px;">361
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+
+
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Commerce/Loyola College.png" alt=""></div>
+            <h3 class="text-xl font-semibold">Loyola College Chennai</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.Com</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 330px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">23.47K</span> First Year Fees <span style="margin-left: 200px;">361
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Science/Hansraj College.png" alt=""></div>
+            <h3 class="text-xl font-semibold">Hansraj College</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.Com </a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 330px;"> <span class="rating"> 4.3/5 </span> </p>
+          <p class="p-2 text"><span class="blue">29.84 K</span> First Year Fees <span style="margin-left: 190px;">162
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img src="Images/Universities/Science/Miranda House.png"
+                alt=""></div>
+            <h3 class="text-xl font-semibold">Miranda House</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.Com </a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 330px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">14.53K</span> First Year Fees <span style="margin-left: 200px;">240
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-18 rounded-full mr-2"><img
+                src="Images/Universities/Commerce/AIMS IBS Business.png" alt=""></div>
+            <h3 class="text-xl font-semibold">AIMS IBS Business School, Bangalore</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> B.Com</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 330px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">25.30K</span> First Year Fees <span style="margin-left: 200px;">201
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="tab-contents" id="Arts">
+      <div class="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Science/Hansraj College.png" alt=""></div>
+            <h3 class="text-xl font-semibold">Hansraj College</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> BA </a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 360px;"> <span class="rating"> 4.3/5 </span> </p>
+          <p class="p-2 text"><span class="blue">29.84 K</span> First Year Fees <span style="margin-left: 190px;">162
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Science/Kirori Mal College.png" alt=""></div>
+            <h3 class="text-xl font-semibold mt-2">Kirori Mal College</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> BA</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 360px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">13.38K</span> First Year Fees <span style="margin-left: 200px;">361
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Science/Madras Christian College.png" alt=""></div>
+            <h3 class="text-xl font-semibold">Madras Christian College</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> BA</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 360px;"> <span class="rating"> 4.5/5 </span> </p>
+          <p class="p-2 text"><span class="blue">25.00 K</span> First Year Fees <span style="margin-left: 180px;">51
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img
+                src="Images/Universities/Science/St. Stephen’s College.png" alt=""></div>
+            <h3 class="text-xl font-semibold">St Stephen's College</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> BA</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 360px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">23.47K</span> First Year Fees <span style="margin-left: 200px;">361
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-18 rounded-full mr-2"><img src="Images/Universities/Science/Hindu College.png"
+                alt=""></div>
+            <h3 class="text-xl font-semibold">Hindu College</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> BA</a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 360px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">25.30K</span> First Year Fees <span style="margin-left: 200px;">201
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="bg-primary w-16 h-16 rounded-full mr-2"><img src="Images/Universities/Science/Miranda House.png"
+                alt=""></div>
+            <h3 class="text-xl font-semibold">Miranda House</h3>
+          </div>
+          <hr>
+          <p class="p-2" style="display: flex;"><a class="link"> BA </a> <img src="Images/star.png" class="star-img"
+              style="margin-left: 360px;"> <span class="rating"> 4.2/5 </span> </p>
+          <p class="p-2 text"><span class="blue">14.53K</span> First Year Fees <span style="margin-left: 200px;">240
+              reviews</span></p>
+          <hr>
+          <div class="mt-4">
+            <button class="btn">View All Courses and Fees</button>
+            <button class="btn">Download Brochure</button>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+
+  <!-- Top Exams-->
+  <div class="exams">
+    <div class="p-4">
+      <h2 class="text-2xl font-bold mb-4">Top Exams</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="w-12 h-12 bg-primary rounded-full mr-2"> <img src="Images/Exams/Jee.png"> </div>
+            <h3 class="text-lg font-semibold">Joint Entrance Exam Main</h3>
+          </div>
+          <p class="text-muted-foreground">JEE Main is a national-level entrance exam for admission to B.E./ B.Tech,
+            B.Arch, and B.Plan courses offered...</p>
+          <hr style="margin-top: 10px; margin-bottom: 10px;">
+          <button class="btn">Read More</button>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="w-12 h-12 bg-primary rounded-full mr-2"> <img src="Images/Exams/Gate.png"> </div>
+            <h3 class="text-lg font-semibold">Graduate Aptitude Test Engineering</h3>
+          </div>
+          <p class="text-muted-foreground">Graduate Aptitude Test in Engineering is a national-level entrance exam for
+            admission to post-graduate and ....</p>
+          <hr style="margin-top: 10px; margin-bottom: 10px;">
+          <button class="btn">Read More</button>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="w-12 h-12 bg-primary rounded-full mr-2"> <img src="Images/Exams/CAT.png"> </div>
+            <h3 class="text-lg font-semibold">Common Admission Test</h3>
+          </div>
+          <p class="text-muted-foreground">CAT is the largest national-level computer-based test for MBA admissions is
+            conducted once every year for ...</p>
+          <hr style="margin-top: 10px; margin-bottom: 10px;">
+          <button class="btn" onclick="navigateToPage('exams', 'exam-btn')">Read More</button>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="w-12 h-12 bg-white rounded-full mr-2"> <img src="Images/Exams/Neet.png"> </div>
+            <h3 class="text-lg font-semibold">National Eligibility Cum Entrance Test</h3>
+          </div>
+          <p class="text-muted-foreground">NEET is a national level entrance exam conducted every year by NTA for
+            admission to MBBS and other ....</p>
+          <hr style="margin-top: 10px; margin-bottom: 10px;">
+          <button class="btn">Read More</button>
+        </div>
+        
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="w-12 h-12 bg-primary rounded-full mr-2"> <img src="Images/Exams/Jee.png"> </div>
+            <h3 class="text-lg font-semibold">Joint Entrance Exam Main</h3>
+          </div>
+          <p class="text-muted-foreground">JEE Main is a national-level entrance exam for admission to B.E./ B.Tech,
+            B.Arch, and B.Plan courses offered...</p>
+          <hr style="margin-top: 10px; margin-bottom: 10px;">
+          <button class="btn">Read More</button>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="w-12 h-12 bg-primary rounded-full mr-2"> <img src="Images/Exams/Gate.png"> </div>
+            <h3 class="text-lg font-semibold">Graduate Aptitude Test Engineering</h3>
+          </div>
+          <p class="text-muted-foreground">Graduate Aptitude Test in Engineering is a national-level entrance exam for
+            admission to post-graduate and ....</p>
+          <hr style="margin-top: 10px; margin-bottom: 10px;">
+          <button class="btn">Read More</button>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="w-12 h-12 bg-primary rounded-full mr-2"> <img src="Images/Exams/CAT.png"> </div>
+            <h3 class="text-lg font-semibold">Common Admission Test</h3>
+          </div>
+          <p class="text-muted-foreground">CAT is the largest national-level computer-based test for MBA admissions is
+            conducted once every year for ...</p>
+          <hr style="margin-top: 10px; margin-bottom: 10px;">
+          <button class="btn">Read More</button>
+        </div>
+
+        <div class="bg-card p-4 rounded-lg border border-border">
+          <div class="flex items-center mb-2">
+            <div class="w-12 h-12 bg-white rounded-full mr-2"> <img src="Images/Exams/Neet.png"> </div>
+            <h3 class="text-lg font-semibold">National Eligibility Cum Entrance Test</h3>
+          </div>
+          <p class="text-muted-foreground">NEET is a national level entrance exam conducted every year by NTA for
+            admission to MBBS and other ....</p>
+          <hr style="margin-top: 10px; margin-bottom: 10px;">
+          <button class="btn">Read More</button>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Cities-->
+  <div class="cities  pb-4">
+    <h2 class="text-2xl font-bold mb-4 pt-4 pl-4">Top Cities</h2>
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center bg-white p-4">
+            <img aria-hidden="true" src="Images/Cities/delhi.png" style="width: 60px;" />
+            <a href="#">
+              <h2 class="font-semibold mt-2" onclick="navigateToPage('list', 'list-btn4')" style="cursor: pointer;">Delhi</h2>
+            </a>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center bg-white p-4">
+            <a href="#">
+              <img aria-hidden="true" src="Images/Cities/pune.png" style="width: 60px;" />
+              <h2 class="font-semibold mt-2 pl-3">Pune</h2>
+            </a>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center bg-white p-4">
+            <a href="#">
+              <img aria-hidden="true" src="Images/Cities/mumbai.png" style="width: 60px;" />
+              <h2 class="font-semibold mt-2">Mumbai</h2>
+            </a>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center bg-white p-4">
+            <a href="#">
+              <img aria-hidden="true" src="Images/Cities/bangalore.png" style="width: 60px;" />
+              <h2 class="font-semibold mt-2" onclick="navigateToPage('list', 'list-btn3')" style="cursor: pointer;">Bangalore</h2>
+            </a>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center bg-white p-4">
+            <a href="#">
+              <img aria-hidden="true" src="Images/Cities/kolkata.png" style="width: 60px;" />
+              <h2 class="font-semibold mt-2">Kolkata</h2>
+            </a>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center bg-white p-4">
+            <a href="#">
+              <img aria-hidden="true" src="Images/Cities/chennai.png" style="width: 60px;" />
+              <h2 class="font-semibold mt-2">Chennai</h2>
+            </a>
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+      <div class="mySlides fade">
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center bg-white p-4">
+            <a href="#">
+              <img aria-hidden="true" src="Images/Cities/ahmedabad.png" style="width: 60px;" />
+              <h2 class="font-semibold mt-2">Ahmedabad</h2>
+            </a>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center bg-white p-4">
+            <a href="#">
+              <img aria-hidden="true" src="Images/Cities/hyderabad.png" style="width: 60px;" />
+              <h2 class="font-semibold mt-2">Hydrabad</h2>
+            </a>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center bg-white p-4">
+            <a href="#">
+              <img aria-hidden="true" src="Images/Cities/mumbai.png" style="width: 60px;" />
+              <h2 class="font-semibold mt-2">Kanpur</h2>
+            </a>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center bg-white p-4">
+            <a href="#">
+              <img aria-hidden="true" src="Images/Cities/bangalore.png" style="width: 60px;" />
+              <h2 class="font-semibold mt-2">Indore</h2>
+            </a>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center bg-white p-4">
+            <a href="#">
+              <img aria-hidden="true" src="Images/Cities/kolkata.png" style="width: 60px;" />
+              <h2 class="font-semibold mt-2">Surat</h2>
+            </a>
+          </div>
+          <div class="border border-border rounded-lg p-2 flex flex-col items-center bg-white p-4">
+            <a href="#">
+              <img aria-hidden="true" src="Images/Cities/jaipur.png" style="width: 60px;" />
+              <h2 class="font-semibold mt-2">Jaipur</h2>
+            </a>
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+      <br>
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+  </div>
+
+
+
+
+  <!-- Footer-->
+  <div class="bg-background text-foreground">
+    <!-- Subscribet-->
+    <div class="subscribe">
+      <h2 class="text-xl font-bold mb-2">Subscribe To Our News Letter</h2>
+      <p class="mb-4">Get Latest Notification Of Colleges, Exams and News</p>
+      <div class="flex space-x-4 mb-6">
+        <input type="email" placeholder="Enter Your Email Address" class="border border-border p-2 rounded w-full" />
+        <input type="tel" placeholder="Enter Your Phone Number" class="border border-border p-2 rounded w-full" />
+        <select class="border border-border p-2 rounded w-full">
+          <option>Select Course</option>
+          <option>Course 1</option>
+          <option>Course 2</option>
+        </select>
+        <button class="bg-primary text-primary-foreground p-2 rounded w-full">Subscribe Now</button>
+      </div>
+    </div>
+
+    <!-- Company Name and List-->
+    <div class="grid grid-cols-2" style="background-color: black; padding: 10px; color: azure; margin-bottom: 10px;">
+      <div>
+      </div>
+      <div class="grid grid-cols-5 gap-4 mb-6"
+        style="background-color: black; padding: 10px; color: azure; margin-bottom: 10px;">
+        <div>
+          <h3 class="font-bold">Top Colleges</h3>
+          <ul>
+            <li><a href="#"> M.B.A </a></li>
+            <li><a href="#">B</a>.Tech/B.E</li>
+            <li><a href="#">MCA</a></li>
+            <li><a href="#">BCA</a></li>
+            <li><a href="#">M</a>.Tech</li>
+            <li><a href="#">MA</a></li>
+            <li><a href="#">BA</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold">Top Universities</h3>
+          <ul>
+            <li><a href="#">Engineering</a></li>
+            <li><a href="#">Management</a></li>
+            <li><a href="#">Medical</a></li>
+            <li><a href="#">Law</a></li>
+            <li><a href="#">Commerce</a></li>
+            <li><a href="#">Science</a></li>
+            <li><a href="#">Arts</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold">Top Exam</h3>
+          <ul>
+            <li><a href="#">CAT</a></li>
+            <li><a href="#">GATE</a></li>
+            <li><a href="#">JEE</a>-MAIN</li>
+            <li><a href="#">NEET</a></li>
+            <li><a href="#">XAT</a></li>
+            <li><a href="#">CLAT</a></li>
+            <li><a href="#">MAT</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold">Top Cities</h3>
+          <ul>
+            <li><a href="#">Bangalore</a></li>
+            <li><a href="#">Lucknow</a></li>
+            <li><a href="#">Indore</a></li>
+            <li><a href="#">Delhi</a></li>
+            <li><a href="#">Mumbai</a></li>
+            <li><a href="#">Kolkata</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold">Top States</h3>
+          <ul>
+            <li><a href="#">Uttar</a> Pradesh</li>
+            <li><a href="#">Tamil</a> Nadu</li>
+            <li><a href="#">Karnataka</a></li>
+            <li><a href="#">West</a> Bengal</li>
+            <li><a href="#">Kerela</a></li>
+            <li><a href="#">Maharashtra</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer links-->
+    <footer style=" text-align: center; background-color: black; padding: 10px; color: azure;">
+      <p class="text-s">Contact Us | Terms & Conditions | Privacy & Policy | © 2024</p>
+    </footer>
+
+  </div>
+
+
+
+<script>
+
+
+function navigateToPage(pageName, searchKey) {
+  let pageUrl;
+
+  switch(pageName) {
+      case 'list':
+          pageUrl = './college_list/client/index.html';
+          break;
+      case 'college':
+          pageUrl = './college/client/index.html';
+          break;
+        case 'exams':
+          pageUrl = './exams/client/index.html';
+          break;
+      default:
+          console.error('Invalid page name provided');
+          return;
+  }
+
+  window.location.href = `${pageUrl}?searchKey=${encodeURIComponent(searchKey)}`;
+}
+</script>
+
+
+  <!-- JavaScript-->
+
+  <!-- Courses show more-->
+  <script>
+    function _f(id) {
+      return document.getElementById(id);
+    }
+
+    let div = _f("maindiv");
+    let btn = _f("btn");
+
+    btn.onclick = function () {
+      if (div.className == "cls") {
+        div.className = "";
+        btn.innerHTML = "Show More";
+      } else {
+        div.className = "cls";
+        btn.innerHTML = "Show Less";
+      }
+    };
+  </script>
+
+  <!-- City slide-->
+  <script>
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+
+  </script>
+
+  <!--Universitirs: stream options-->
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab")
+    }
+  </script>
+
+
+
+</body>
+
+</html>

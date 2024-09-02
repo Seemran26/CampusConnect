@@ -1,0 +1,316 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+		<script type="text/javascript">
+			window.tailwind.config = {
+				darkMode: ['class'],
+				theme: {
+					extend: {
+						colors: {
+							border: 'hsl(var(--border))',
+							input: 'hsl(var(--input))',
+							ring: 'hsl(var(--ring))',
+							background: 'hsl(var(--background))',
+							foreground: 'hsl(var(--foreground))',
+							primary: {
+								DEFAULT: 'hsl(var(--primary))',
+								foreground: 'hsl(var(--primary-foreground))'
+							},
+							secondary: {
+								DEFAULT: 'hsl(var(--secondary))',
+								foreground: 'hsl(var(--secondary-foreground))'
+							},
+							destructive: {
+								DEFAULT: 'hsl(var(--destructive))',
+								foreground: 'hsl(var(--destructive-foreground))'
+							},
+							muted: {
+								DEFAULT: 'hsl(var(--muted))',
+								foreground: 'hsl(var(--muted-foreground))'
+							},
+							accent: {
+								DEFAULT: 'hsl(var(--accent))',
+								foreground: 'hsl(var(--accent-foreground))'
+							},
+							popover: {
+								DEFAULT: 'hsl(var(--popover))',
+								foreground: 'hsl(var(--popover-foreground))'
+							},
+							card: {
+								DEFAULT: 'hsl(var(--card))',
+								foreground: 'hsl(var(--card-foreground))'
+							},
+						},
+					}
+				}
+			}
+		</script>
+		<style type="text/tailwindcss">
+			@layer base {
+				:root {
+					--background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+--card: 0 0% 100%;
+--card-foreground: 240 10% 3.9%;
+--popover: 0 0% 100%;
+--popover-foreground: 240 10% 3.9%;
+--primary: 240 5.9% 10%;
+--primary-foreground: 0 0% 98%;
+--secondary: 240 4.8% 95.9%;
+--secondary-foreground: 240 5.9% 10%;
+--muted: 240 4.8% 95.9%;
+--muted-foreground: 240 3.8% 46.1%;
+--accent: 240 4.8% 95.9%;
+--accent-foreground: 240 5.9% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 5.9% 90%;
+--input: 240 5.9% 90%;
+--ring: 240 5.9% 10%;
+--radius: 0.5rem;
+				}
+				.dark {
+					--background: 240 10% 3.9%;
+--foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--primary: 0 0% 98%;
+--primary-foreground: 240 5.9% 10%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--ring: 240 4.9% 83.9%;
+				}
+			}
+		</style>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+    <style>
+
+.tab-titles{
+  background-color: #00000041;
+  padding: 12px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #000000;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+
+.tab-links:hover::after{
+    width: 100%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: #d43d6d;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+  </style>
+  </head>
+
+<body>
+
+    <!-- Navbar and Main Image -->
+  <section class="main" id="main">
+    <div class="overlay">
+      <nav class="navbar">
+        <div class="logo">
+          <h2 class="p-3">CollegeFest</h2>
+        </div>
+        <div style="width: 1000px;">
+          <input type="text" placeholder="Search for colleges, courses, exams..."
+            class="w-full p-3 pl-10 border border-border rounded-lg focus:outline-none focus:ring focus:ring-ring" />
+        </div>
+        <div class="navelements">
+          <div class="nav2 ">
+            <button class="p-3" style="width: 200px; background-color: rgb(207, 207, 207); border-radius: 10px; margin-right: 20px;"> Need Counsiling</button>
+              <button class="p-3" style="width: 150px; background-color: rgb(207, 207, 207); border-radius: 10px; margin-right: 20px;"> Sign Up</button>
+                <button class="p-3" style="width: 150px; background-color: rgb(207, 207, 207); border-radius: 10px; margin-right: 20px;"> Login</button>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </section>
+  
+      <!-- Colleges list-->
+      <div id="main-container" style="padding: 50px;">
+        <!-- Tab Example -->
+        <div class="tab-titles">
+          <p class="tab-links" onclick="openTab(event, 'Description')">Info</p>
+          <p class="tab-links" onclick="openTab(event, 'Course')">Course & Fees</p>
+          <p class="tab-links" onclick="openTab(event, 'Cutoff')">Cutoff</p>
+          <p class="tab-links" onclick="openTab(event, 'Admission')">Admission</p>
+      </div>
+  
+    </div>
+    
+
+  <!-- Footer-->
+  <div class="bg-background text-foreground" style="background-color: black; color: white;">
+    <!-- Subscribet-->
+    <div class="subscribe">
+      <h2 class="text-xl font-bold mb-2">Subscribe To Our News Letter</h2>
+      <p class="mb-4">Get Latest Notification Of Colleges, Exams and News</p>
+      <div class="flex space-x-4 mb-6">
+        <input type="email" placeholder="Enter Your Email Address" class="border border-border p-2 rounded w-full" />
+        <input type="tel" placeholder="Enter Your Phone Number" class="border border-border p-2 rounded w-full" />
+        <select class="border border-border p-2 rounded w-full">
+          <option>Select Course</option>
+          <option>Course 1</option>
+          <option>Course 2</option>
+        </select>
+        <button class="bg-secondary text-secondary-foreground p-2 rounded w-full">Subscribe Now</button>
+      </div>
+    </div>
+
+    <!-- Company Name and List-->
+    <div class="grid grid-cols-2" style="background-color: black; padding: 10px; color: azure; margin-bottom: 10px;">
+      <div>
+        <p class="text-s">Company Name</p>
+      </div>
+      <div class="grid grid-cols-5 gap-4 mb-6"
+        style="background-color: black; padding: 10px; color: azure; margin-bottom: 10px;">
+        <div>
+          <h3 class="font-bold">Top Colleges</h3>
+          <ul>
+            <li><a href="#"> M.B.A </a></li>
+            <li><a href="#">B</a>.Tech/B.E</li>
+            <li><a href="#">MCA</a></li>
+            <li><a href="#">BCA</a></li>
+            <li><a href="#">M</a>.Tech</li>
+            <li><a href="#">MA</a></li>
+            <li><a href="#">BA</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold">Top Universities</h3>
+          <ul>
+            <li><a href="#">Engineering</a></li>
+            <li><a href="#">Management</a></li>
+            <li><a href="#">Medical</a></li>
+            <li><a href="#">Law</a></li>
+            <li><a href="#">Commerce</a></li>
+            <li><a href="#">Science</a></li>
+            <li><a href="#">Arts</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold">Top Exam</h3>
+          <ul>
+            <li><a href="#">CAT</a></li>
+            <li><a href="#">GATE</a></li>
+            <li><a href="#">JEE</a>-MAIN</li>
+            <li><a href="#">NEET</a></li>
+            <li><a href="#">XAT</a></li>
+            <li><a href="#">CLAT</a></li>
+            <li><a href="#">MAT</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold">Top Cities</h3>
+          <ul>
+            <li><a href="#">Bangalore</a></li>
+            <li><a href="#">Lucknow</a></li>
+            <li><a href="#">Indore</a></li>
+            <li><a href="#">Delhi</a></li>
+            <li><a href="#">Mumbai</a></li>
+            <li><a href="#">Kolkata</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold">Top States</h3>
+          <ul>
+            <li><a href="#">Uttar</a> Pradesh</li>
+            <li><a href="#">Tamil</a> Nadu</li>
+            <li><a href="#">Karnataka</a></li>
+            <li><a href="#">West</a> Bengal</li>
+            <li><a href="#">Kerela</a></li>
+            <li><a href="#">Maharashtra</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer links-->
+    <footer style=" text-align: center; background-color: black; padding: 10px; color: azure;">
+      <p class="text-s">Contact Us | Terms & Conditions | Privacy & Policy | © 2024</p>
+    </footer>
+
+  </div>
+
+
+  <script>
+    function openTab(evt, tabName) {
+        // Hide all tab contents
+        const contents = document.querySelectorAll('.tab-contents');
+        contents.forEach(content => {
+            content.classList.remove('active-tab');
+        });
+
+        // Remove "active-links" class from all tab links
+        const links = document.querySelectorAll('.tab-links');
+        links.forEach(link => {
+            link.classList.remove('active-links');
+        });
+
+        // Show the current tab content and add "active-links" class to the clicked tab link
+        const activeTab = document.getElementById(tabName);
+        if (activeTab) {
+            activeTab.classList.add('active-tab');
+        } else {
+            console.error('No tab content found for:', tabName);
+        }
+
+        evt.currentTarget.classList.add('active-links');
+    }
+</script>
+
+
+</body>
+
+</html>

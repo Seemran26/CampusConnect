@@ -1,0 +1,30 @@
+main {
+    width: 50%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+table {
+    margin: 50px auto;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    border: 1px solid #000;
+}
+
+th, td {
+    padding: 5px;
+}
+
+.details-box{
+    margin-top: 100px;
+    background-color: aqua;
+    width: 500px;
+    margin-left: 200px;
+}
+
+.abc{
+    padding: 10px;
+    background-color: blue;
+}
